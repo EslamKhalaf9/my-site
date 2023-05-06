@@ -1,0 +1,47 @@
+---
+import Project from "./Project.astro";
+
+//dummy data of projects with title and descriptiona and github and preview links
+
+const projects = [
+  {
+    id: 1,
+    title: "movies app",
+    description: "Movies app is a successful Open-Source project that I created which have been featured on some of the biggest tech sites like CSS-Tricks, Hostinger, etc & used by thousands of developers globally",
+    github: "/",
+    preview: "/",
+    img: "https://picsum.photos/400",
+  },
+  {
+    id: 2,
+    title: "social media app",
+    description: "Social media app is a successful Open-Source project that I created which have been featured on some of the biggest tech sites like CSS-Tricks, Hostinger, etc & used by thousands of developers globally",
+    github: "/",
+    preview: "/",
+    img: "https://picsum.photos/400",
+  },
+  {
+    id: 3,
+    title: "e-commerce app",
+    description: "Amazon Clone app that I created which have been featured on some of the biggest tech sites like CSS-Tricks, Hostinger, etc & used by thousands of developers globally",
+    github: "/",
+    preview: "/",
+    img: "https://picsum.photos/400",
+  }
+]
+
+---
+
+<section id="my-work" class="border-y border-green-600">
+  <div class="flex flex-col items-center mx-10 my-8">
+    <h1 class="text-5xl leading-loose text-green-600 mb-4">My Work</h1>
+    <p class="text-2xl leading-7 font-bold text-gray-400">Here are some projects I've worked on.</p>
+    <div class="work flex flex-col items-center my-10">
+      {
+        projects.map(project => (
+          <Project {...project} />
+        ))
+      }
+    </div>
+  </div>
+</section>

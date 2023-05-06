@@ -1,0 +1,44 @@
+---
+import { Icon } from "astro-icon";
+
+const socialLinks = [
+  {
+    name: "Linkedin",
+    icon: "mdi:linkedin",
+    url: "https://linkedin.com"
+  },
+  {
+    name: "Github",
+    icon: "mdi:github",
+    url: "https://github.com"
+  },
+  {
+    name: "Facebook",
+    icon: "mdi:facebook",
+    url: "https://facebook.com"
+  },
+  {
+    name: "Twitter",
+    icon: "mdi:twitter",
+    url: "https://twitter.com"
+  },
+  {
+    name: "Youtube",
+    icon: "mdi:youtube",
+    url: "https://youtube.com"
+  }
+]
+
+---
+
+<div class="social-links flex justify-center gap-2 my-8 w-full">
+  {
+    socialLinks.map(link => (
+    <div class="link w-10">
+    <a href={link.url}>
+      <Icon class="text-green-500" name={link.icon} />
+      </a>
+    </div>
+    ))
+  }
+</div>

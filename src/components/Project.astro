@@ -1,0 +1,26 @@
+---
+export interface Props {
+	title: string;
+	description: string;
+	github: string;
+	preview: string;
+  img: string
+}
+
+const { title, description, github, preview, img} = Astro.props;
+---
+
+
+<div class="project my-4 flex md:flex-row flex-col gap-4 w-full items-center">
+  <div class="image overflow-hidden md:w-1/3 w-full">
+    <img class="mx-auto rounded border-green-300 border-2" src={img} alt="project1" />
+  </div>
+  <div class="content md:w-2/3 w-full text-center md:text-start">
+    <h3 class="my-2 text-3xl capitalize">{title}</h3>
+    <p class="text-gray-300 leading-7">{description}</p>
+    <div class="controls mt-8">
+      <a href={github} class="border-2 border-green-600 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md uppercase">Source</a>
+      <a href={preview} class="border-2 border-green-600 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-md uppercase">Preview</a>
+    </div>
+  </div>
+</div>

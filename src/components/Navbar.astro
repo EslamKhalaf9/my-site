@@ -1,0 +1,12 @@
+---
+const path = Astro.url.pathname;
+---
+
+<nav class="flex justify-center items-center flex-col p-4 border-b-4 border-green-600 md:flex-row md:justify-between md:px-36">
+    <h1 class="text-xs mb-2 md:mb-0 italic md:text-lg">@EslamKhalaf20</h1>
+    <ul class="flex gap-2 md:text-3xl md:gap-4">
+        <li><a class={`hover:text-green-600 ${path === '/' && 'text-green-500'}`} href="/">Home</a></li>
+        <li><a class={`hover:text-green-600 ${path === '/about' && 'text-green-500'}`} href="/about">About</a></li>
+        <li><a class={`hover:text-green-600 ${path === '/contact' && 'text-green-500'}`} href="/contact">Contact</a></li>
+    </ul>
+</nav>
